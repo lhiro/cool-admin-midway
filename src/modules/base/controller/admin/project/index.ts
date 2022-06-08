@@ -1,7 +1,7 @@
 import { Provide } from '@midwayjs/decorator';
 import { CoolController, BaseController } from '@cool-midway/core';
-import { ProjectService } from '../../../service/sys/project';
-import { ProjectEntity } from '../../../entity/sys/project';
+import { ProjectService } from '../../../service/project';
+import { ProjectListEntity } from '../../../entity/project/list';
 
 /**
  * 描述
@@ -9,7 +9,7 @@ import { ProjectEntity } from '../../../entity/sys/project';
 @Provide()
 @CoolController({
   api: ['add', 'delete', 'update', 'info', 'list', 'page'],
-  entity: ProjectEntity,
+  entity: ProjectListEntity,
   service: ProjectService,
 })
 export class ProjectController extends BaseController {}

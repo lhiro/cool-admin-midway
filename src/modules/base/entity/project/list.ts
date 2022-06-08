@@ -3,10 +3,10 @@ import { BaseEntity } from '@cool-midway/core';
 import { Column } from 'typeorm';
 
 /**
- * 描述
+ * 项目列表
  */
-@EntityModel('base_sys_project')
-export class ProjectEntity extends BaseEntity {
+@EntityModel('base_project_list')
+export class ProjectListEntity extends BaseEntity {
   @Column({ comment: '项目编号', type: 'bigint' })
   projectId: number;
 
@@ -47,7 +47,7 @@ export class ProjectEntity extends BaseEntity {
   projectPeople: string;
 
   @Column({ comment: '立项人联系电话' })
-  contract: string;
+  contact: string;
 
   @Column({ comment: '跟踪人' })
   followPeople: string;
