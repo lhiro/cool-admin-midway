@@ -13,6 +13,7 @@ export default {
   // 文件上传
   upload: {
     fileSize: '200mb',
+    whitelist: () => true,
   },
   // 模板渲染
   view: {
