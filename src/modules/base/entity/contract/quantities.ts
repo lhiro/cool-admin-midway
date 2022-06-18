@@ -8,7 +8,7 @@ import { Column } from 'typeorm';
 @EntityModel('base_contract_quantities')
 export class QuantitiesEntity extends BaseEntity {
   @Column({ comment: '编号', type: 'bigint' })
-  quantitiesId: string;
+  quantitiesId: number;
 
   @Column({ comment: '清单子目' })
   listingSubitem: string;
