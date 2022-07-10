@@ -5,8 +5,8 @@ import { Column } from 'typeorm';
 /**
  * 合同收款
  */
-@EntityModel('base_contract_proceed')
-export class ContractProceedEntity extends BaseEntity {
+@EntityModel('base_contract_proceeds')
+export class ContractProceedsEntity extends BaseEntity {
   @Column({ comment: '收款编号', type: 'bigint' })
   proceedId: string;
 

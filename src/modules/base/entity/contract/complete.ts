@@ -80,6 +80,6 @@ export class ContractCompleteEntity extends BaseEntity {
   @Column({ comment: '经办人' })
   informant: string;
 
-  @Column({ comment: '工程量清单id' })
+  @Column({ comment: '工程量清单id', type: 'bigint', nullable: true })
   quantitiesId: number;
 }

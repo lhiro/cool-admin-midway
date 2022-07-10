@@ -13,6 +13,7 @@ import { ContractService } from '../../../service/contract';
   service: ContractService,
   insertParam() {
     return {
+      completeId: 1,
     };
   }
 })

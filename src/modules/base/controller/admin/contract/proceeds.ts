@@ -1,6 +1,6 @@
 import { Provide } from '@midwayjs/decorator';
 import { CoolController, BaseController } from '@cool-midway/core';
-import { ContractProceedEntity } from '../../../entity/contract/proceed';
+import { ContractProceedsEntity } from '../../../entity/contract/proceed';
 import { ContractService } from '../../../service/contract';
 
 /**
@@ -9,7 +9,7 @@ import { ContractService } from '../../../service/contract';
 @Provide()
 @CoolController({
   api: ['add', 'delete', 'update', 'info', 'list', 'page'],
-  entity: ContractProceedEntity,
+  entity: ContractProceedsEntity,
   service: ContractService,
   insertParam() {
     return {
@@ -17,4 +17,4 @@ import { ContractService } from '../../../service/contract';
     };
   }
 })
-export class ContractProceedController extends BaseController {}
+export class ContractProceedsController extends BaseController {}
