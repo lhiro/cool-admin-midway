@@ -3,12 +3,12 @@ import { BaseEntity } from '@cool-midway/core';
 import { Column } from 'typeorm';
 
 /**
- * 合同收款
+ * 完工结算
  */
-@EntityModel('base_contract_proceed')
-export class ContractProceedEntity extends BaseEntity {
-  @Column({ comment: '收款编号', type: 'bigint' })
-  proceedId: string;
+@EntityModel('base_contract_complete')
+export class ContractCompleteEntity extends BaseEntity {
+  @Column({ comment: '结算编号', type: 'bigint' })
+  completeId: string;
 
   @Column({ comment: '结算名称' })
   name: string;

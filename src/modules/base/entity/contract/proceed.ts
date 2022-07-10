@@ -53,14 +53,11 @@ export class ContractProceedEntity extends BaseEntity {
   @Column({ comment: '备注', nullable: true })
   remark: string;
 
-  @Column({ comment: '账户信息', nullable: true })
-  accountInfo: string;
+  @Column({ comment: '银行账户信息id', nullable: true, type: 'bigint' })
+  bankId: number;
 
-  @Column({ comment: '银行账户', nullable: true })
-  bankAccount: string;
-
-  @Column({ comment: '结算类型 1: 按进度付款 2: 按合同付款', nullable: true })
-  proceedType: number;
+  @Column({ comment: '收款类型 1: 按进度付款 2: 按合同付款', nullable: true })
+  paymentType: number;
 
   @Column({ comment: '已开票金额', type: 'bigint' })
   invoicedAmount: number;
