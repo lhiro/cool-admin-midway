@@ -10,9 +10,13 @@ import { DictInfoService } from '../../service/info';
 @CoolController({
   api: ['add', 'delete', 'update', 'info', 'list', 'page'],
   entity: DictInfoEntity,
-  pageQueryOp: {
+  service: DictInfoService,
+  listQueryOp: {
     fieldEq: ['typeId'],
     keyWordLikeFields: ['name'],
+    addOrderBy: {
+      createTime: 'ASC',
+    },
   },
 })
 export class AdminDictInfoController extends BaseController {
